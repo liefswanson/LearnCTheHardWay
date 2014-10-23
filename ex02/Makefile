@@ -1,8 +1,6 @@
 compiler= gcc
 cflags=-Wall -g
 
-srcdir=../ex01
-
 srcs=hello.c
 objs=$(srcs:.c=.o)
 exe=hello
