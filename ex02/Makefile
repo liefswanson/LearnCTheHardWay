@@ -1,7 +1,23 @@
-CFLAGS=-Wall -g
+compiler= gcc
+cflags=-Wall -g
 
-all:
-	cc ../ex01/hello.c -o hello
+srcdir=../ex01
+
+srcs=hello.c
+objs=$(srcs:.c=.o)
+exe=hello
+
+all: $(srcs) $(exe)
+
+$(EXECUTABLE): $(objs) 
+	$(compiler) $(objs) -o $@
+
+.c.o:
+	$(compiler) $(cflags) $< -o $@
+
+debug:
+	echo $(srcs)
+	echo $(objs)
 
 clean:
-	rm -f hello
+	rm -f $(objs) $(exe)
