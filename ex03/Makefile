@@ -1,9 +1,9 @@
 compiler= gcc
 cflags=-Wall -g
 
-srcs=hello.c
+srcs=ex03.c
 objs=$(srcs:.c=.o)
-exe=hello
+exe=ex03
 
 all: $(srcs) $(exe)
 
