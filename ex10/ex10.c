@@ -26,6 +26,7 @@ int main(int argc, char *argv[])
   for (i = 0; i < num_states+1; i++) {
 	printf("states %d: %s\n", i ,states[i]);
   }
-  
+
+  printf("look I made a change!");  
   return 0;
 }
